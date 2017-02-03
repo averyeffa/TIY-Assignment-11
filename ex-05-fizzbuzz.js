@@ -9,16 +9,18 @@
  */
 
 var fizzbuzz = function(number){
-  var fizzWord = ('');
+  var fizzWord = '';
 
-  if ((number % 5 === 0) && (number % 3 === 0)) {
-    fizzWord = 'FizZBuzZ';
-  } else if ((number % 3 === 0) && (number % 5 !== 0)){
-    fizzWord = 'fizz';
-  } else if ((number % 5 === 0) && (number % 3 !== 0)){
-    fizzWord = 'buzz';
-  } else {
-    fizzWord = '.';
+  for (var i = 1; i <= number; i++) {
+  if ((i % 5 === 0) && (i % 3 === 0)){
+    fizzWord = fizzWord + 'FizZBuzZ';
+  }  else if ((i % 3 === 0) && (i % 5 !== 0)){
+    fizzWord = fizzWord + 'fizz';
+  }  else if ((i % 5 === 0) && (i % 3 !== 0)){
+    fizzWord = fizzWord + 'buzz';
+  }  else {
+    fizzWord = fizzWord + '.';
+  }
   }
   return fizzWord;
 }

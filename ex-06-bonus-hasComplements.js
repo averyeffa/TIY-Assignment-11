@@ -2,14 +2,27 @@
 /** ! Adventure Mode !
  * Ex : hasComplements() *
  *
- * Write a function called hasComplements that accepts a target number 
+ * Write a function called hasComplements that accepts a target number
  * and an array of numbers
  *
- * If the sum of any two numbers in the array of numbers equals the 
- * target number , then the function should return `true`, 
+ * If the sum of any two numbers in the array of numbers equals the
+ * target number , then the function should return `true`,
  * otherwise, the function should return `false`.
- * 
+ *
 */
+
+var hasComplements = function(targetNum, arrayOfNum){
+
+  for (var i = 0; i < arrayOfNum.length; i++) {
+    if (i++ === targetNum) {
+        return true;
+    } else {
+        return false;
+    }
+  }
+}
+
+
 
 
 
@@ -26,7 +39,3 @@ console.assert( hasComplements(7, anotherArray) === true )
 console.assert( hasComplements(9,  anotherArray) === false )
 console.assert( hasComplements(14, anotherArray) === true )
 console.assert( hasComplements(15, anotherArray) === false )
-
-
-
-
